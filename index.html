@@ -28,11 +28,12 @@
                 <img class="curser_pointer" src="./assets/images/png/Logo.png" alt="logo">
             </div>
             <div class="box w_90 bg_darkblack  overflow-y-scroll scroll_none h-100">
-                <div class="d-flex flex-column justify-content-between align-items-center z-5 position-relative pe-2 pt-4 h_80">
+                <div
+                    class="d-flex flex-column justify-content-between align-items-center z-5 position-relative pe-2 pt-4 h_80">
                     <div class="d-flex flex-column gap-5">
-                        <a
-                         href="#" class="side_line sidebar_top_icon mt-lg-3"><svg width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a onclick="openCity(event, 'London')" id="defaultOpen" href="#"
+                            class="side_line sidebar_top_icon mt-lg-3 tablinks"><svg width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_2_279)" opacity="0.4">
                                     <path
                                         d="M3.99998 0H6.99998C9.20911 0 11 1.79086 11 3.99998V6.99998C11 9.20911 9.20911 11 6.99998 11H3.99998C1.79086 11 0 9.20916 0 6.99998V3.99998C0 1.79086 1.79086 0 3.99998 0Z"
@@ -54,9 +55,9 @@
                                 </defs>
                             </svg></a>
 
-                        <a  href="#"
-                         class="mt-lg-3 sidebar_top_icon"><svg width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a onclick="openCity(event, 'tab2')" href="#" class="mt-lg-3 sidebar_top_icon tablinks"><svg
+                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.4">
                                     <path
                                         d="M15 8.00002H21.54C21.1909 7.0749 20.6485 6.2349 19.949 5.53604L16.465 2.05004C15.7653 1.35137 14.9251 0.80935 14 0.460037V7.00004C14 7.55227 14.4477 8.00002 15 8.00002Z"
@@ -67,9 +68,9 @@
                                 </g>
                             </svg>
                         </a>
-                        <a  href="#"
-                         class="mt-lg-3 sidebar_top_icon"><svg width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a onclick="openCity(event, 'tab3')" href="#" class="mt-lg-3 sidebar_top_icon tablinks"><svg
+                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.4" clip-path="url(#clip0_2_289)">
                                     <path
                                         d="M12 6C11.2044 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9V21C9 21.7956 9.31607 22.5587 9.87868 23.1213C10.4413 23.6839 11.2044 24 12 24C12.7956 24 13.5587 23.6839 14.1213 23.1213C14.6839 22.5587 15 21.7956 15 21V9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6Z"
@@ -88,9 +89,9 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a  href="#"
-                         class="mt-lg-3 sidebar_top_icon"><svg width="25"
-                                height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="#" onclick="openCity(event, 'tab4')" class="mt-lg-3 sidebar_top_icon tablinks"><svg
+                                width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g id="iconspace_Wallet_25px" opacity="0.4">
                                     <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd"
                                         d="M4.5 7H19V4.5C19 3.67157 18.3284 3 17.5 3C17.4383 3 17.3767 3.00381 17.3154 3.0114L4.16959 4.64132C2.92758 4.80692 2 5.86638 2 7.11939V8.05051C2.63526 7.40223 3.52066 7 4.5 7ZM20.5 8H4.5C3.81814 8 3.18214 8.27292 2.71424 8.75041L2 9.47928V20.5C2 21.8807 3.11929 23 4.5 23H20.5C21.8807 23 23 21.8807 23 20.5V19H17.5C15.567 19 14 17.433 14 15.5C14 13.567 15.567 12 17.5 12H23V10.5C23 9.11929 21.8807 8 20.5 8ZM17.5 13C16.1193 13 15 14.1193 15 15.5C15 16.8807 16.1193 18 17.5 18H23V13H17.5Z"
@@ -190,7 +191,7 @@
                 </div>
 
             </nav>
-            <div class="hero_box overflow-y-scroll bg_black h-100 px-md-5 px-3 pb-5 mt_-2">
+            <div class="hero_box overflow-y-scroll bg_black h-100 px-md-5 px-3 pb-5 mt_-2 tabcontent" id="London">
                 <div class="row flex-column flex-xl-row">
                     <div class="col-xxl-9 col-xl-8 h-100 pt-4">
                         <div class="row">
@@ -271,93 +272,96 @@
                             </div>
                         </div>
                         <div class="position-relative z-0">
-                                <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Analitcs Report</h2>
-                                <div class="position-relative"><img class="w_101 w-100 min_h_290"
-                                        src="./assets/images/webp/graph_img.webp" alt="graph">
-                                    <div class="position-absolute d-flex grap_input_set gap-3 d-none d-sm-inline-flex">
-                                        <div class="graph_input d-flex justify-content-between"><input class="fs_lg w-100 border-0 ff_dm text_gray fw-normal fs_xs"
-                                                type="text" placeholder="Total Earning"><img
-                                                src="./assets/images/svg/dropdown_arrow.svg" alt="arrow"></div>
-                                        <div class="graph_input d-flex"><input class="fs_lg w-100 border-0 text_gray fw-normal" type="text"
-                                                placeholder="Monthly"><img src="./assets/images/svg/dropdown_arrow.svg"
-                                                alt="arrow"></div>
+                            <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Analitcs Report</h2>
+                            <div class="position-relative"><img class="w_101 w-100 min_h_290"
+                                    src="./assets/images/webp/graph_img.webp" alt="graph">
+                                <div class="position-absolute d-flex grap_input_set gap-3 d-none d-sm-inline-flex">
+                                    <div class="graph_input d-flex justify-content-between"><input
+                                            class="fs_lg w-100 border-0 ff_dm text_gray fw-normal fs_xs" type="text"
+                                            placeholder="Total Earning"><img
+                                            src="./assets/images/svg/dropdown_arrow.svg" alt="arrow"></div>
+                                    <div class="graph_input d-flex"><input
+                                            class="fs_lg w-100 border-0 text_gray fw-normal" type="text"
+                                            placeholder="Monthly"><img src="./assets/images/svg/dropdown_arrow.svg"
+                                            alt="arrow"></div>
+                                </div>
+                            </div>
+
+                            <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Activity Summary</h2>
+                            <div class="activity_graph mb-lg-5">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex gap-3" id="tabs">
+                                        <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">History</a>
+                                        <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">Upcoming</a>
+                                    </div>
+                                    <p class="ff_dm fs_sm text_gray fw-medium mb-0 c_pointer view_more">View More <img
+                                            class="ps-2" height="14" src="./assets/images/svg/view_more_arrow.svg"
+                                            alt="arrow"></p>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_1.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Sale of goods
+                                                </h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                    rental</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_3.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">design
+                                                    services</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_4.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Service</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">4 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                    rental</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
                                     </div>
                                 </div>
-                            
-                                <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Activity Summary</h2>
-                                <div class="activity_graph mb-lg-5">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex gap-3" id="tabs">
-                                            <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">History</a>
-                                            <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">Upcoming</a>
-                                        </div>
-                                        <p class="ff_dm fs_sm text_gray fw-medium mb-0 c_pointer view_more">View More <img class="ps-2"
-                                                height="14" src="./assets/images/svg/view_more_arrow.svg" alt="arrow"></p>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
-                                            <div class="d-flex align-items-center">
-                                                <div><img src="./assets/images/svg/target_1.svg" alt="number_images"></div>
-                                                <div class="ps-3 mt-1">
-                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Sale of goods
-                                                    </h4>
-                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
-                                                </div>
-                                            </div>
-                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
-                                        </div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
-                                            <div class="d-flex align-items-center">
-                                                <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
-                                                <div class="ps-3 mt-1">
-                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
-                                                        rental</h4>
-                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
-                                                </div>
-                                            </div>
-                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
-                                        </div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
-                                            <div class="d-flex align-items-center">
-                                                <div><img src="./assets/images/svg/target_3.svg" alt="number_images"></div>
-                                                <div class="ps-3 mt-1">
-                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">design
-                                                        services</h4>
-                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
-                                                </div>
-                                            </div>
-                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
-                                        </div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
-                                            <div class="d-flex align-items-center">
-                                                <div><img src="./assets/images/svg/target_4.svg" alt="number_images"></div>
-                                                <div class="ps-3 mt-1">
-                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Service</h4>
-                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">4 month later</p>
-                                                </div>
-                                            </div>
-                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
-                                        </div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
-                                            <div class="d-flex align-items-center">
-                                                <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
-                                                <div class="ps-3 mt-1">
-                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
-                                                        rental</h4>
-                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
-                                                </div>
-                                            </div>
-                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                           
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-xxl-3 col-xl-4 pe-xl-5 ps-xl-4 pt-4">
@@ -440,6 +444,110 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="bg_darkblack vh-100">
+                <div>
+                    <div id="tab2" class="tabcontent mx-lg-4 px-3">
+                        <h2 class="ff_dm text-white fw-bold fs_2xl ps-4 pb-3 mb-3 mt-0 pt-4">Analitcs Report</h2>
+                        <div class="position-relative"><img class="w-100 min_h_290"
+                                src="./assets/images/webp/graph_img.webp" alt="graph">
+                            <div class="position-absolute d-flex grap_input_set gap-3 d-none d-sm-inline-flex">
+                                <div class="graph_input d-flex justify-content-between"><input
+                                        class="fs_lg w-100 border-0 ff_dm text_gray fw-normal fs_xs" type="text"
+                                        placeholder="Total Earning"><img src="./assets/images/svg/dropdown_arrow.svg"
+                                        alt="arrow"></div>
+                                <div class="graph_input d-flex"><input class="fs_lg w-100 border-0 text_gray fw-normal"
+                                        type="text" placeholder="Monthly"><img
+                                        src="./assets/images/svg/dropdown_arrow.svg" alt="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab3" class="tabcontent mx-lg-4 px-3">
+                    <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-0 pb-3 mb-3">Activity Summary</h2>
+                    <div class="activity_graph mb-lg-5">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex gap-3" id="tabs">
+                                <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">History</a>
+                                <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">Upcoming</a>
+                            </div>
+                            <p class="ff_dm fs_sm text_gray fw-medium mb-0 c_pointer view_more">View More <img
+                                    class="ps-2" height="14" src="./assets/images/svg/view_more_arrow.svg" alt="arrow">
+                            </p>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                <div class="d-flex align-items-center">
+                                    <div><img src="./assets/images/svg/target_1.svg" alt="number_images"></div>
+                                    <div class="ps-3 mt-1">
+                                        <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Sale of goods
+                                        </h4>
+                                        <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                    </div>
+                                </div>
+                                <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                <div class="d-flex align-items-center">
+                                    <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                    <div class="ps-3 mt-1">
+                                        <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                            rental</h4>
+                                        <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                    </div>
+                                </div>
+                                <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                <div class="d-flex align-items-center">
+                                    <div><img src="./assets/images/svg/target_3.svg" alt="number_images"></div>
+                                    <div class="ps-3 mt-1">
+                                        <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">design
+                                            services</h4>
+                                        <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                    </div>
+                                </div>
+                                <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                <div class="d-flex align-items-center">
+                                    <div><img src="./assets/images/svg/target_4.svg" alt="number_images"></div>
+                                    <div class="ps-3 mt-1">
+                                        <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Service</h4>
+                                        <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">4 month later</p>
+                                    </div>
+                                </div>
+                                <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                <div class="d-flex align-items-center">
+                                    <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                    <div class="ps-3 mt-1">
+                                        <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                            rental</h4>
+                                        <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                    </div>
+                                </div>
+                                <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab4" class="tabcontent">
+                   <div class="row justify-content-center align-items-center pt-lg-5 pt-3">
+                    <div class="col-6">
+                        <div class="account_card">
+                            <h3 class="ff_dm fs_lg fw-bold text-white mb-4">My Account Bank</h3>
+                            <div><img class="w-100" src="./assets/images/png/account_bank.png" alt="account_bank"></div>
+                            <div class="text-center pt-lg-5 pt-4"><button
+                                    class="account_btn ff_dm fs_xs text_gray fw-bold"><img class="me-3" height="14"
+                                        width="14" src="./assets/images/svg/plus_icon.svg" alt="plus">Add New
+                                    Card</button></div>
+                        </div>
+                    </div>
+                   </div>
                 </div>
             </div>
         </div>
