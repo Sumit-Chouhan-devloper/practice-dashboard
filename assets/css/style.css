@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+/* utilities classes */
+.ff_dm {
+    font-family: 'dm sans';
+}
+
+.outline_n {
+    outline: none;
+}
+
+.w_space_no {
+    white-space: nowrap;
+}
+
+.h_80 {
+    height: 80% !important;
+}
+
+.w_90 {
+    width: 90px;
+}
+
+.scroll_none::-webkit-scrollbar {
+    display: none !important;
+}
+
+.c_pointer {
+    cursor: pointer;
+}
+
+.mt_-2 {
+    margin-top: -2px;
+}
+
+.h_effect {
+    transition: all 300ms linear;
+}
+
+.h_effect:hover {
+    transform: scale(1.05);
+}
+
+/*------------------------------------------------------ nav bar -------------------------------*/
+.humber {
+    height: 20px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.humber span {
+    height: 2px;
+    width: 100%;
+    background-color: #6D7D93;
+}
+
+.w3-dropdown-content {
+    min-width: 35px !important;
+    background-color: var(--clr-offblack) !important;
+}
+
+.w3-bar-item {
+    padding: 4px 10px !important;
+}
+
+.nav_input {
+    background-color: var(--clr-offblack);
+    padding-left: 20px !important;
+    width: 250px;
+}
+
+.nav_input input {
+    outline: none;
+    padding: 10px 0 10px 0 !important;
+    width: 100%;
+}
+
+.nav_input input::placeholder {
+    font-family: 'dm sans';
+    color: var(--clr-gray);
+    font-weight: 400;
+    font-size: var(--fs-sm);
+}
+
+.account_card {
+    padding: 30px 25px !important;
+    border-radius: 12px;
+    border: 1px solid rgba(109, 125, 147, 0.15);
+    box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.10);
+    background-color: var(--clr-offblack);
+}
+
+/*--------------------------------------------- cards --------------------------------------------*/
+.dash_card {
+    padding: 20px 25px !important;
+    box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.10);
+    border-radius: 12px;
+    background-color: var(--clr-offblack);
+    transition: all 300ms linear;
+}
+.view_more img{transition: all 300ms linear;}
+.view_more:hover img{transform: translateX(10px);}
+.dash_card:hover {
+    background-color: var(--clr-blue);
+}
+
+.dash_card:hover p {
+    color: white;
+}
+
+.dash_card:hover span {
+    color: white;
+}
+
+.dash_card:hover h3 {
+    color: white;
+}
+
+.dash_card:hover .dash_card_arrow path {
+    fill: black !important;
+}
+
+.dash_card:hover .dash_card_arrow {
+    transform: rotate(180deg);
+}
+
+.account_btn {
+    border-radius: 6px;
+    border: 0.5px solid rgba(109, 125, 147, 0.40);
+    background-color: var(--clr-darkblack);
+    padding: 10px 30px;
+}
+
+.target_card {
+    padding: 25px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(109, 125, 147, 0.15);
+    background: #1C1D24;
+    box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.10);
+}
+
+.target_card_child {
+    padding: 12px 18px;
+    background-color: var(--clr-darkblack);
+    border-radius: 6px;
+}
+
+.activity_graph {
+    padding: 30px;
+    background-color: var(--clr-darkblack);
+    border: 1px solid rgba(109, 125, 147, 0.15);
+    background-color: #1C1D24;
+    border-radius: 12px;
+}
+
+/*--------------------------------------------------------- sidebar ---------------------------------------*/
+.sidebar {
+    color: #fff;
+    width: 90px;
+    float: left;
+}
+
+.sidebar_top_icon {
+    position: relative;
+}
+
+.sidebar_top_icon::before {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-blue);
+    left: -32%;
+    height: 0;
+    width: 3px;
+    border-radius: 5px;
+    top: -5px;
+    transition: all 300ms linear;
+}
+
+.sidebar_top_icon {
+    transition: all 300ms linear;
+}
+
+.sidebar_top_icon:hover svg a {
+    opacity: 1;
+}
+
+.sidebar_top_icon:hover svg g {
+    opacity: 1;
+}
+
+.sidebar_top_icon:focus svg a {
+    opacity: 1;
+}
+
+.sidebar_top_icon:focus svg g {
+    opacity: 1;
+}
+
+.sidebar_top_icon:hover svg path {
+    fill: var(--clr-blue);
+}
+
+.sidebar_top_icon:focus svg path {
+    fill: var(--clr-blue);
+}
+
+.sidebar_top_icon:focus:before {
+    height: 150%;
+}
+
+.graph_input {
+    background-color: var(--clr-darkblack);
+    padding: 6px 20px;
+    border-radius: 8px;
+    border: 0.5px solid rgba(109, 125, 147, 0.15);
+    max-width: 203px;
+}
+
+.grap_input_set {
+    top: 5%;
+    right: 5%;
+}
+
+.graph_input input {
+    background-color: transparent !important;
+    outline: none;
+}
+
+.graph_input input::placeholder {
+    font-family: 'dm sans';
+    color: var(--clr-gray);
+    font-weight: 400;
+}
+
+/*------------------------------------------------- graph -----------------------------------*/
+.graph_2_link {
+    position: relative;
+}
+
+.graph_2_link:hover {
+    color: var(--clr-blue);
+}
+
+.graph_2_link:focus {
+    color: var(--clr-blue);
+}
+
+.graph_2_link::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-blue);
+    transition: all 300ms linear;
+    left: 50%;
+    bottom: -20px;
+}
+
+.graph_2_link:focus::before {
+    width: 100%;
+    left: 0;
+}
+
+.min_h_290 {
+    min-height: 290;
+}
+
+/*--------------------------------- max width 992 -----------------------*/
+@media (max-width:992px) {
+    .siderbox {
+        position: absolute;
+        left: -91px;
+        background-color: #131313;
+        transition: all 300ms linear;
+        z-index: 50 !important;
+    }
+
+    .show {
+        left: 0;
+        transition: all 400ms ease-in-out;
+    }
+}
+
+/*--------------------------------- min width 992 --------------------------------*/
+@media (min-width:992px) {
+    .nav_input {
+        background-color: var(--clr-offblack);
+        padding-left: 20px !important;
+        width: 350px;
+    }
+
+    .w_101 {
+        width: 101% !important;
+    }
+}

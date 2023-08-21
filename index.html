@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/png/Logo.png">
+    <!-- root css -->
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- w3 css -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="vh-100 overflow-hidden d-flex position-sticky top-0">
+        <!-- sidebar -->
+        <div class="siderbox bg_darkblack h-100" id="mySideNav">
+            <div class="logo ps-4 pt-5 pb-4 bg_darkblack">
+                <img class="curser_pointer" src="./assets/images/png/Logo.png" alt="logo">
+            </div>
+            <div class="box w_90 bg_darkblack  overflow-y-scroll scroll_none h-100">
+                <div class="d-flex flex-column justify-content-between align-items-center z-5 position-relative pe-2 pt-4 h_80">
+                    <div class="d-flex flex-column gap-5">
+                        <a
+                         href="#" class="side_line sidebar_top_icon mt-lg-3"><svg width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_279)" opacity="0.4">
+                                    <path
+                                        d="M3.99998 0H6.99998C9.20911 0 11 1.79086 11 3.99998V6.99998C11 9.20911 9.20911 11 6.99998 11H3.99998C1.79086 11 0 9.20916 0 6.99998V3.99998C0 1.79086 1.79086 0 3.99998 0Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M17 0H20C22.2091 0 24 1.79086 24 3.99998V6.99998C24 9.20911 22.2091 11 20 11H17C14.7909 11 13 9.20911 13 6.99998V3.99998C13 1.79086 14.7908 0 17 0Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M3.99998 13H6.99998C9.20911 13 11 14.7909 11 17V20C11 22.2091 9.20911 24 6.99998 24H3.99998C1.79086 24 0 22.2092 0 20V17C0 14.7909 1.79086 13 3.99998 13Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M17 13H20C22.2091 13 24 14.7909 24 17V20C24 22.2092 22.2091 24 20 24H17C14.7909 24 13 22.2092 13 20V17C13 14.7909 14.7908 13 17 13Z"
+                                        fill="#D1D1D1" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_279">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></a>
+
+                        <a  href="#"
+                         class="mt-lg-3 sidebar_top_icon"><svg width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                    <path
+                                        d="M15 8.00002H21.54C21.1909 7.0749 20.6485 6.2349 19.949 5.53604L16.465 2.05004C15.7653 1.35137 14.9251 0.80935 14 0.460037V7.00004C14 7.55227 14.4477 8.00002 15 8.00002Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M21.976 9.99998H15C13.3432 9.99998 12 8.65683 12 6.99998V0.024C11.839 0.0129844 11.678 0 11.515 0H6.99998C4.23994 0.00332812 2.0033 2.23997 2.00002 5.00002V19C2.0033 21.76 4.23994 23.9967 6.99998 24H17C19.76 23.9967 21.9967 21.76 22 19V10.485C22 10.322 21.987 10.161 21.976 9.99998Z"
+                                        fill="#D1D1D1" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a  href="#"
+                         class="mt-lg-3 sidebar_top_icon"><svg width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4" clip-path="url(#clip0_2_289)">
+                                    <path
+                                        d="M12 6C11.2044 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9V21C9 21.7956 9.31607 22.5587 9.87868 23.1213C10.4413 23.6839 11.2044 24 12 24C12.7956 24 13.5587 23.6839 14.1213 23.1213C14.6839 22.5587 15 21.7956 15 21V9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M21 0C20.2044 0 19.4413 0.31607 18.8787 0.87868C18.3161 1.44129 18 2.20435 18 3V21C18 21.7956 18.3161 22.5587 18.8787 23.1213C19.4413 23.6839 20.2044 24 21 24C21.7956 24 22.5587 23.6839 23.1213 23.1213C23.6839 22.5587 24 21.7956 24 21V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.31607 21.7956 0 21 0V0Z"
+                                        fill="#D1D1D1" />
+                                    <path
+                                        d="M3 12C2.20435 12 1.44129 12.3161 0.87868 12.8787C0.31607 13.4413 0 14.2044 0 15L0 21C0 21.7956 0.31607 22.5587 0.87868 23.1213C1.44129 23.6839 2.20435 24 3 24C3.79565 24 4.55871 23.6839 5.12132 23.1213C5.68393 22.5587 6 21.7956 6 21V15C6 14.2044 5.68393 13.4413 5.12132 12.8787C4.55871 12.3161 3.79565 12 3 12Z"
+                                        fill="#D1D1D1" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_289">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a  href="#"
+                         class="mt-lg-3 sidebar_top_icon"><svg width="25"
+                                height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="iconspace_Wallet_25px" opacity="0.4">
+                                    <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.5 7H19V4.5C19 3.67157 18.3284 3 17.5 3C17.4383 3 17.3767 3.00381 17.3154 3.0114L4.16959 4.64132C2.92758 4.80692 2 5.86638 2 7.11939V8.05051C2.63526 7.40223 3.52066 7 4.5 7ZM20.5 8H4.5C3.81814 8 3.18214 8.27292 2.71424 8.75041L2 9.47928V20.5C2 21.8807 3.11929 23 4.5 23H20.5C21.8807 23 23 21.8807 23 20.5V19H17.5C15.567 19 14 17.433 14 15.5C14 13.567 15.567 12 17.5 12H23V10.5C23 9.11929 21.8807 8 20.5 8ZM17.5 13C16.1193 13 15 14.1193 15 15.5C15 16.8807 16.1193 18 17.5 18H23V13H17.5Z"
+                                        fill="#D1D1D1" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                    <path
+                                        d="M1.60702 18C2.43417 19.4356 4.26853 19.9288 5.70412 19.1017C5.70511 19.1011 5.70605 19.1005 5.70703 19.1L6.15201 18.843C6.99201 19.5616 7.95755 20.119 9 20.487V21C9 22.6568 10.3432 24 12 24C13.6568 24 15 22.6568 15 21V20.487C16.0426 20.1184 17.0082 19.5604 17.848 18.841L18.295 19.099C19.7309 19.9274 21.5666 19.4349 22.395 17.999C23.2234 16.563 22.731 14.7274 21.295 13.899L20.851 13.643C21.0509 12.5554 21.0509 11.4405 20.851 10.353L21.295 10.097C22.7309 9.26855 23.2234 7.43292 22.395 5.99695C21.5666 4.56103 19.731 4.06852 18.295 4.89694L17.85 5.15395C17.0092 4.43616 16.043 3.87984 15 3.513V3C15 1.34316 13.6568 0 12 0C10.3432 0 9 1.34316 9 3V3.513C7.95741 3.88158 6.99183 4.43958 6.15201 5.15902L5.70502 4.90003C4.26905 4.07156 2.43342 4.56408 1.605 6C0.776578 7.43592 1.26905 9.27159 2.70502 10.1L3.14902 10.356C2.94914 11.4435 2.94914 12.5584 3.14902 13.646L2.70502 13.902C1.27303 14.7326 0.782156 16.5647 1.60702 18ZM12 8.00002C14.2091 8.00002 16 9.79088 16 12C16 14.2091 14.2091 16 12 16C9.79087 16 8.00002 14.2091 8.00002 12C8.00002 9.79088 9.79087 8.00002 12 8.00002Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="mt-5 pt-lg-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                    <path
+                                        d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M16 17L21 12L16 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M21 12H9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- navbar -->
+        <div class="box w-100 pb-5">
+            <nav class="pt-lg-5 pt-3 pb-4 ps-2 bg_black">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="ff_dm text-white fw-bold fs_3xl ps-sm-3 ps-lg-5 ms-1 c_pointer">Dashboard</div>
+                    <div class="d-flex gap-sm-5 gap-sm-3 gap-2 align-items-center pe-3">
+                        <div><img class="d-lg-none" src="./assets/images/png/search_icon.png" alt="search_icon"></div>
+                        <div class="nav_input d-lg-flex d-none d-lg-block align-items-center rounded-2"><img height="24"
+                                width="24" src="./assets/images/png/search_icon.png" alt="icon"><input
+                                class="bg-transparent border-0 ms-3 pe-1 ff_dm fs_xsm text_gray fw-normal" type="text"
+                                placeholder="Search for transaction, item, etc"></div>
+                        <a href="#"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_359)">
+                                    <path
+                                        d="M5.18503 9.00016L5.18503 9.00014C5.60328 7.11895 6.63837 5.43155 8.12576 4.20619C9.61315 2.98083 11.4675 2.28783 13.3939 2.23737C15.3204 2.1869 17.2085 2.78185 18.758 3.92766C20.3075 5.07346 21.4295 6.70435 21.9457 8.56106L21.8493 8.58785L21.9457 8.56107L24.1622 16.536C24.1623 16.5361 24.1623 16.5362 24.1623 16.5363C24.3129 17.0708 24.3369 17.633 24.2323 18.1784C24.1278 18.7237 23.8975 19.2372 23.5599 19.678C23.5599 19.6781 23.5598 19.6782 23.5597 19.6783L23.4803 19.6175C23.1552 20.0488 22.734 20.3983 22.2502 20.6383C21.7664 20.8783 21.2332 21.0021 20.6931 21L5.18503 9.00016ZM5.18503 9.00016L3.47003 16.7188C3.35305 17.245 3.35574 17.7908 3.4779 18.3158C3.60006 18.8409 3.83857 19.3318 4.17582 19.7523C4.51308 20.1728 4.94046 20.5122 5.42644 20.7455C5.91241 20.9788 6.44457 21.0999 6.98363 21.1L20.6928 21.1L5.18503 9.00016ZM26.2178 15.9658L26.2381 16.039H26.2388C26.4574 16.8686 26.4871 17.737 26.3254 18.5802C26.1588 19.4483 25.7939 20.266 25.259 20.9697C24.7241 21.6733 24.0338 22.2438 23.2419 22.6364C22.4501 23.0291 21.5782 23.2334 20.6943 23.2333H19.7166H19.6349L19.6186 23.3134C19.3555 24.6095 18.6523 25.7747 17.6283 26.6117C16.6043 27.4487 15.3225 27.9059 14 27.9059C12.6775 27.9059 11.3956 27.4487 10.3716 26.6117C9.34764 25.7747 8.64449 24.6095 8.38131 23.3134L8.36505 23.2333H8.28331H6.98365C6.12505 23.2334 5.2774 23.0406 4.5033 22.6691C3.7292 22.2977 3.0484 21.7572 2.51116 21.0874C1.97393 20.4177 1.59398 19.6358 1.39937 18.7996C1.20475 17.9633 1.20045 17.094 1.38676 16.2559L3.10293 8.53839C3.62449 6.19288 4.91511 4.08901 6.76964 2.5612C8.62416 1.0334 10.9362 0.169334 13.3381 0.106358C15.7401 0.0433828 18.0942 0.78511 20.0263 2.21364C21.9583 3.64217 23.3574 5.67551 24.0011 7.99046L26.2178 15.9658ZM10.7146 23.2333H10.5732L10.6204 23.3667C10.8677 24.0662 11.325 24.6722 11.9299 25.1018C12.5348 25.5314 13.2577 25.7636 13.9996 25.7667L14.0004 25.7667C14.7423 25.7636 15.4651 25.5314 16.07 25.1018C16.6749 24.6722 17.1323 24.0662 17.3796 23.3667L17.4267 23.2333H17.2853H10.7146Z"
+                                        fill="#6D7D93" stroke="#0D0D0D" stroke-width="0.2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_359">
+                                        <rect width="28" height="28" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.3076 13.3718C25.312 15.0301 24.9245 16.666 24.1769 18.1462C23.2904 19.9199 21.9276 21.4118 20.2411 22.4548C18.5546 23.4977 16.6111 24.0506 14.6282 24.0513C12.9699 24.0557 11.334 23.6682 9.8538 22.9206L2.69226 25.3077L5.07944 18.1462C4.33179 16.666 3.94435 15.0301 3.94867 13.3718C3.94944 11.3889 4.50226 9.44538 5.54522 7.75889C6.58817 6.07241 8.08007 4.70961 9.8538 3.82313C11.334 3.07548 12.9699 2.68803 14.6282 2.69236H15.2564C17.8752 2.83683 20.3486 3.94219 22.2032 5.79677C24.0578 7.65135 25.1632 10.1248 25.3076 12.7436V13.3718Z"
+                                    stroke="#6D7D93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="d-flex align-items-center ps-2 pe-lg-5">
+
+
+                            <div class="w3-dropdown-hover me-sm-3">
+                                <button class="border-0 bg_black">
+                                    <a href="#"><img src="./assets/images/png/nav_img.png" alt="profile_img_1" /></a>
+                                    <img src="./assets/images/svg/dropdown_arrow.svg" alt="dropdown_arrow">
+                                </button>
+                                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                    <a href="#" class="w3-bar-item w3-button text-white ff_dm fw-bold fs_sm">Profile</a>
+                                    <a href="#" class="w3-bar-item w3-button text-white ff_dm fw-bold fs_sm">id</a>
+                                    <a href="#" class="w3-bar-item w3-button text-white ff_dm fw-bold fs_sm">logout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="d-lg-none" onclick="change()">
+                            <span class="humber">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="hero_box overflow-y-scroll bg_black h-100 px-md-5 px-3 pb-5 mt_-2">
+                <div class="row flex-column flex-xl-row">
+                    <div class="col-xxl-9 col-xl-8 h-100 pt-4">
+                        <div class="row">
+                            <div class="col-xxl-3 col-sm-6 px-3">
+                                <div class="dash_card">
+                                    <p class="text_gray ff_dm fs_md fw-normal">Total Earning</p>
+                                    <h3 class="text_gray ff_dm fs_2xl fw-bold my-3 py-1">$ 120,000</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="text_gray ff_dm fs_xxs fw-normal"><span
+                                                class="text_gray ff_dm fs_xs fw-bold pe-1">12%</span>Increase From
+                                            Target
+                                        </p>
+                                        <div class="dash_card_arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1H4.5ZM3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.53553 8.17157C7.7308 7.97631 7.7308 7.65973 7.53553 7.46447C7.34027 7.2692 7.02369 7.2692 6.82843 7.46447L4 10.2929L1.17157 7.46447C0.976311 7.2692 0.659728 7.2692 0.464466 7.46447C0.269204 7.65973 0.269204 7.97631 0.464466 8.17157L3.64645 11.3536ZM3.5 1V11H4.5V1H3.5Z"
+                                                    fill="#6D7D93" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-sm-6 px-3 mt-4 mt-sm-0">
+                                <div class="dash_card">
+                                    <p class="text_gray ff_dm fs_md fw-normal">Invoices</p>
+                                    <h3 class="text_gray ff_dm fs_2xl fw-bold my-3 py-1">$ 16,500</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="text_gray ff_dm fs_xxs fw-normal"><span
+                                                class="text_gray ff_dm fs_xs fw-bold pe-1">2%</span>Decrease From Target
+                                        </p>
+                                        <div class="dash_card_arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1H4.5ZM3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.53553 8.17157C7.7308 7.97631 7.7308 7.65973 7.53553 7.46447C7.34027 7.2692 7.02369 7.2692 6.82843 7.46447L4 10.2929L1.17157 7.46447C0.976311 7.2692 0.659728 7.2692 0.464466 7.46447C0.269204 7.65973 0.269204 7.97631 0.464466 8.17157L3.64645 11.3536ZM3.5 1V11H4.5V1H3.5Z"
+                                                    fill="#6D7D93" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-sm-6 px-3 mt-4 mt-xxl-0">
+                                <div class="dash_card">
+                                    <p class="text_gray ff_dm fs_md fw-normal">Decrease From Target</p>
+                                    <h3 class="text_gray ff_dm fs_2xl fw-bold my-3 py-1">$ 48,670</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="text_gray ff_dm fs_xxs fw-normal"><span
+                                                class="text_gray ff_dm fs_xs fw-bold pe-1">6%</span>Increase From Target
+
+                                        </p>
+                                        <div class="dash_card_arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1H4.5ZM3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.53553 8.17157C7.7308 7.97631 7.7308 7.65973 7.53553 7.46447C7.34027 7.2692 7.02369 7.2692 6.82843 7.46447L4 10.2929L1.17157 7.46447C0.976311 7.2692 0.659728 7.2692 0.464466 7.46447C0.269204 7.65973 0.269204 7.97631 0.464466 8.17157L3.64645 11.3536ZM3.5 1V11H4.5V1H3.5Z"
+                                                    fill="#6D7D93" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-sm-6 px-3 mt-4 mt-xxl-0">
+                                <div class="dash_card">
+                                    <p class="text_gray ff_dm fs_md fw-normal">Balance</p>
+                                    <h3 class="text_gray ff_dm fs_2xl fw-bold my-3 py-1">$ 74,330</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="text_gray ff_dm fs_xxs fw-normal"><span
+                                                class="text_gray ff_dm fs_xs fw-bold pe-1">1%</span>Increase From Target
+
+                                        </p>
+                                        <div class="dash_card_arrow"><svg width="8" height="12" viewBox="0 0 8 12"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1H4.5ZM3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.53553 8.17157C7.7308 7.97631 7.7308 7.65973 7.53553 7.46447C7.34027 7.2692 7.02369 7.2692 6.82843 7.46447L4 10.2929L1.17157 7.46447C0.976311 7.2692 0.659728 7.2692 0.464466 7.46447C0.269204 7.65973 0.269204 7.97631 0.464466 8.17157L3.64645 11.3536ZM3.5 1V11H4.5V1H3.5Z"
+                                                    fill="#6D7D93" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative z-0">
+                                <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Analitcs Report</h2>
+                                <div class="position-relative"><img class="w_101 w-100 min_h_290"
+                                        src="./assets/images/webp/graph_img.webp" alt="graph">
+                                    <div class="position-absolute d-flex grap_input_set gap-3 d-none d-sm-inline-flex">
+                                        <div class="graph_input d-flex justify-content-between"><input class="fs_lg w-100 border-0 ff_dm text_gray fw-normal fs_xs"
+                                                type="text" placeholder="Total Earning"><img
+                                                src="./assets/images/svg/dropdown_arrow.svg" alt="arrow"></div>
+                                        <div class="graph_input d-flex"><input class="fs_lg w-100 border-0 text_gray fw-normal" type="text"
+                                                placeholder="Monthly"><img src="./assets/images/svg/dropdown_arrow.svg"
+                                                alt="arrow"></div>
+                                    </div>
+                                </div>
+                            
+                                <h2 class="ff_dm text-white fw-bold fs_2xl ps-2 pt-4 mt-3 pb-3 mb-3">Activity Summary</h2>
+                                <div class="activity_graph mb-lg-5">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex gap-3" id="tabs">
+                                            <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">History</a>
+                                            <a href="#" class="ff_dm fs_md text_gray fw-bold mb-0 graph_2_link">Upcoming</a>
+                                        </div>
+                                        <p class="ff_dm fs_sm text_gray fw-medium mb-0 c_pointer view_more">View More <img class="ps-2"
+                                                height="14" src="./assets/images/svg/view_more_arrow.svg" alt="arrow"></p>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div><img src="./assets/images/svg/target_1.svg" alt="number_images"></div>
+                                                <div class="ps-3 mt-1">
+                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Sale of goods
+                                                    </h4>
+                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                                </div>
+                                            </div>
+                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                                <div class="ps-3 mt-1">
+                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                        rental</h4>
+                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                                </div>
+                                            </div>
+                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div><img src="./assets/images/svg/target_3.svg" alt="number_images"></div>
+                                                <div class="ps-3 mt-1">
+                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">design
+                                                        services</h4>
+                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                                </div>
+                                            </div>
+                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div><img src="./assets/images/svg/target_4.svg" alt="number_images"></div>
+                                                <div class="ps-3 mt-1">
+                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Service</h4>
+                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">4 month later</p>
+                                                </div>
+                                            </div>
+                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between target_card_child mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                                <div class="ps-3 mt-1">
+                                                    <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                        rental</h4>
+                                                    <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                                </div>
+                                            </div>
+                                            <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-4 pe-xl-5 ps-xl-4 pt-4">
+                        <div class="row flex-xl-column flex-row gap-xl-5">
+                            <div class="col-xl-12 col-md-6">
+                                <div class="account_card">
+                                    <h3 class="ff_dm fs_lg fw-bold text-white mb-4">My Account Bank</h3>
+                                    <div><img class="w-100" src="./assets/images/png/account_bank.png"
+                                            alt="account_bank"></div>
+                                    <div class="text-center pt-lg-5 pt-4"><button
+                                            class="account_btn ff_dm fs_xs text_gray fw-bold"><img class="me-3"
+                                                height="14" width="14" src="./assets/images/svg/plus_icon.svg"
+                                                alt="plus">Add New
+                                            Card</button></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-md-6 mt-4 mt-md-0">
+                                <div class="target_card">
+                                    <h3 class="ff_dm fs_md text-white fw-bold mb-3 pb-1">Target</h3>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3 h_effect">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_1.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Sale of goods
+                                                </h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3 h_effect">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                    rental</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3 h_effect">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_3.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">design
+                                                    services</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">1 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3 h_effect">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_4.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">Service</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">4 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                    <div
+                                        class="d-flex align-items-center justify-content-between target_card_child mt-3 h_effect">
+                                        <div class="d-flex align-items-center">
+                                            <div><img src="./assets/images/svg/target_2.svg" alt="number_images"></div>
+                                            <div class="ps-3 mt-1">
+                                                <h4 class="mb-0 ff_dm fs_xs text-white fw-bold pb-1 mt-0">property
+                                                    rental</h4>
+                                                <p class="mb-0 ff_dm fs_xxs text_gray fw-bold pt-1">3 month later</p>
+                                            </div>
+                                        </div>
+                                        <div><img src="./assets/images/svg/right_arrow.svg" alt="arrow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js">
+
+
+
+    </script>
+    </div>
+    </div>
+</body>
+
+</html>
